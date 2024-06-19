@@ -1,0 +1,10 @@
+@media screen and (max-width: 991px) {
+    .navbar-toggler {
+        box-shadow: none !important;
+        border    : none !important;
+    }
+
+    .nav-item {
+        text-align: center;
+    }
+}
