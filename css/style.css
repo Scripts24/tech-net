@@ -276,7 +276,7 @@ img {
 }
 
 .input-textarea {
-    width : 99% ;
+    width : 99%;
     margin: 10px auto;
 }
 
@@ -298,5 +298,28 @@ input[type=number]::-webkit-outer-spin-button {
     margin            : 0;
 }
 
-
 /**FOOTER*/
+
+footer {
+    background-color: var(--color-dark);
+    padding-top     : 100px;
+}
+
+.footer-top {
+    border-bottom : 2px solid var(--color-body);
+    padding-bottom: 40px;
+}
+
+.footer-top .line {
+    width           : 50px;
+    height          : 3px;
+    background-color: white;
+    margin-top      : 10px;
+    margin-bottom   : 15px;
+    z-index         : 2;
+}
+
+.footer-bottom {
+    padding-top   : 40px;
+    padding-bottom: 40px;
+}
