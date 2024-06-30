@@ -191,7 +191,7 @@ img {
     bottom    : 0;
     right     : 0;
     cursor    : pointer;
-    transition: var(--transition);
+    transition: all 1s ease;
 }
 
 .service:hover::after {
@@ -360,4 +360,3 @@ footer {
 .footer-icon .bi-messenger:hover {
     color: #0084FF !important;
 }
-
