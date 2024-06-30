@@ -100,6 +100,70 @@ img {
     color           : #fff;
 }
 
+/* Modo Oscuro */
+html[data-bs-theme=dark] {
+    --color-text: white;
+    --color-bg  : #262626;
+}
+
+html[data-bs-theme=dark] .navbar,
+html[data-bs-theme=dark] .title-brand,
+html[data-bs-theme=dark] .navbar-nav .nav-link,
+html[data-bs-theme=dark] .service,
+html[data-bs-theme=dark] .service h5,
+html[data-bs-theme=dark] #contact form,
+html[data-bs-theme=dark] #contact form .form-control {
+    color           : var(--color-text) !important;
+    background-color: var(--color-bg) !important;
+}
+
+html[data-bs-theme=dark] .service:hover h5 {
+    background: transparent !important;
+}
+
+html[data-bs-theme=dark] .text-about h2,
+html[data-bs-theme=dark] .text-about p,
+html[data-bs-theme=dark] .section-title h1,
+html[data-bs-theme=dark] .section-title p {
+    color: var(--color-text) !important;
+}
+
+html[data-bs-theme=dark] footer {
+    border-top: 2px solid var(--color-body);
+}
+
+/* Modo Claro */
+html:not([data-bs-theme=dark]) {
+    --color-text: black;
+    --color-bg  : white;
+}
+
+html:not([data-bs-theme=dark]) .navbar,
+html:not([data-bs-theme=dark]) .title-brand,
+html:not([data-bs-theme=dark]) .navbar-nav .nav-link,
+html:not([data-bs-theme=dark]) .service,
+html:not([data-bs-theme=dark]) .service h5,
+html:not([data-bs-theme=dark]) #contact form,
+html:not([data-bs-theme=dark]) #contact form .form-control {
+    color           : var(--color-text) !important;
+    background-color: var(--color-bg) !important;
+}
+
+html:not([data-bs-theme=dark]) .service:hover h5 {
+    background: transparent !important;
+}
+
+html:not([data-bs-theme=dark]) .text-about h2,
+html:not([data-bs-theme=dark]) .text-about p,
+html:not([data-bs-theme=dark]) .section-title h1,
+html:not([data-bs-theme=dark]) .section-title p {
+    color: var(--color-text) !important;
+}
+
+html:not([data-bs-theme=dark]) footer {
+    border-top: 2px solid var(--color-body);
+}
+
 /**NAVBAR*/
 
 .navbar {
@@ -112,7 +176,7 @@ img {
 }
 
 .navbar-nav .nav-link.active {
-    color        : var(--color-brand);
+    color        : var(--color-brand) !important;
     border-bottom: var(--color-brand) 2px solid;
 }
 

@@ -1,29 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech.Net</title>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Bootstrap Icons-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <!--Fancybox-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <!--Media queries-->
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/media.css" />
     <!--CSS-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <!--Iconos para el modo oscuro-->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+    </svg>
+
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg bg-white sticky-top">
         <div class="container">
@@ -49,6 +69,53 @@
                         <a class="nav-link" href="#contact">Contacto</a>
                     </li>
                 </ul>
+                <!--Menú para el modo oscuro-->
+                <ul class="navbar-nav mb-2 mb-lg-0 dropdown-theme">
+                    <li class="nav-item dropdown w-25">
+                        <button
+                            class="btn btn-link nav-link py-1 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+                            id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
+                            data-bs-display="static">
+                            <svg class="bi my-1 theme-icon-active" width="16" height="16" fill="currentColor">
+                                <use href="#circle-half"></use>
+                            </svg>
+                            <span class="d-lg-none ms-2">Cambiar tema</span>
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-end px-1" aria-labelledby="bd-theme">
+                            <li>
+                                <button type="button" class="dropdown-item d-flex align-items-center"
+                                    data-bs-theme-value="light">
+                                    <svg class="bi me-2 opacity-50 theme-icon" width="16" height="16"
+                                        fill="currentColor">
+                                        <use href="#sun-fill"></use>
+                                    </svg>
+                                    Light
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item d-flex align-items-center"
+                                    data-bs-theme-value="dark">
+                                    <svg class="bi me-2 opacity-50 theme-icon" width="16" height="16"
+                                        fill="currentColor">
+                                        <use href="#moon-stars-fill"></use>
+                                    </svg>
+                                    Dark
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item d-flex align-items-center active"
+                                    data-bs-theme-value="auto">
+                                    <svg class="bi me-2 opacity-50 theme-icon" width="16" height="16"
+                                        fill="currentColor">
+                                        <use href="#circle-half"></use>
+                                    </svg>
+                                    Auto
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -60,10 +127,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="text-uppercase fw-semibold display-3 text-white">Bienvenidos a Tech.Net</h1>
-                        <h3 class="text-white mt-3 mb-4">Soluciones de <span class="typewrite" data-loop="yes"
-                                data-speed="100" data-delay="1000"
-                                data-words='["Networking", " Hardware", "Seguridad"]'></span></h3>
+                        <h1 class="text-uppercase fw-semibold display-3 text-white">
+                            Bienvenidos a Tech.Net
+                        </h1>
+                        <h3 class="text-white mt-3 mb-4">
+                            Soluciones de
+                            <span class="typewrite" data-loop="yes" data-speed="100" data-delay="1000"
+                                data-words='["Networking", " Hardware", "Seguridad"]'></span>
+                        </h3>
                         <div>
                             <a href="#" class="btn btn-brand">Consultar</a>
                         </div>
@@ -81,29 +152,38 @@
                         <div class="section-title">
                             <h1 class="display-5 fw-semibold">Conócenos</h1>
                             <div class="line"></div>
-                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum</p>
+                            <p>
+                                Zombie ipsum reversus ab viral inferno, nam rick grimes malum
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-around align-items-center">
                     <div class="col-lg-6 img-about">
-                        <img src="img/about.jpg">
+                        <img src="img/about.jpg" />
                     </div>
                     <div class="col-lg-5 text-about">
                         <h2 class="mb-3 mt-3 text-center">Sobre Tech.Net</h2>
-                        <p class="mb-4 text-center">Desde 1996 nos dedicamos a brindar soluciones tecnológicas de
-                            calidad.</p>
+                        <p class="mb-4 text-center">
+                            Desde 1996 nos dedicamos a brindar soluciones tecnológicas de
+                            calidad.
+                        </p>
                         <div class="d-flex pt-4 mb-3">
                             <i class="bi bi-award-fill icon-box me-3 mt-2"></i>
-                            <p>Contamos con personal altamente calificado, brindando el control y la seguridad que
-                                impactarán directamente en los tiempos de respuesta de su empresa, maximizando así su
-                                productividad y retorno de inversión en IT.</p>
+                            <p>
+                                Contamos con personal altamente calificado, brindando el
+                                control y la seguridad que impactarán directamente en los
+                                tiempos de respuesta de su empresa, maximizando así su
+                                productividad y retorno de inversión en IT.
+                            </p>
                         </div>
                         <div class="d-flex">
                             <i class="bi bi-award-fill icon-box me-3 mt-2"></i>
-                            <p>Abordamos tu proyecto como si fuese nuestro, opinamos, sugerimos, evaluamos.
-                                Generamos vínculos con nuestros clientes a partir de la asesoría constante y los
-                                resultados.</p>
+                            <p>
+                                Abordamos tu proyecto como si fuese nuestro, opinamos,
+                                sugerimos, evaluamos. Generamos vínculos con nuestros clientes
+                                a partir de la asesoría constante y los resultados.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -111,7 +191,9 @@
         </section>
 
         <section>
-            <h2 class="text-center text-uppercase mb-4 font-monospace">Confían en nosotros</h2>
+            <h2 class="text-center text-uppercase mb-4 font-monospace">
+                Confían en nosotros
+            </h2>
             <div class="brands">
                 <div class="about-slider">
                     <div class="container-brands">
@@ -144,8 +226,10 @@
                         <div class="section-title">
                             <h1 class="display-5 fw-semibold">Servicios</h1>
                             <div class="line"></div>
-                            <p>Implementamos y mantenemos su estructura de red mediante soluciones flexibles y
-                                escalables.</p>
+                            <p>
+                                Implementamos y mantenemos su estructura de red mediante
+                                soluciones flexibles y escalables.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -156,7 +240,9 @@
                                 <i class="bi bi-router"></i>
                             </div>
                             <h5 class="mt-2 mb-3">Redes</h5>
-                            <p>Contamos con técnicos altamente capacitados en las principales tecnologías del mercado.
+                            <p>
+                                Contamos con técnicos altamente capacitados en las principales
+                                tecnologías del mercado.
                             </p>
                         </div>
                     </div>
@@ -166,7 +252,10 @@
                                 <i class="fa-brands fa-aws"></i>
                             </div>
                             <h5 class="mt-2 mb-3">DevOps</h5>
-                            <p>Mantenemos y administramos ambientes Cloud bajo las mejores prácticas el mercado.</p>
+                            <p>
+                                Mantenemos y administramos ambientes Cloud bajo las mejores
+                                prácticas el mercado.
+                            </p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -175,8 +264,10 @@
                                 <i class="fa-solid fa-sitemap"></i>
                             </div>
                             <h5 class="mt-2 mb-3">Consultoría IT</h5>
-                            <p>Asesoramiento y gestión de proyectos, tanto en su infraestructura como en su
-                                mantenimiento.</p>
+                            <p>
+                                Asesoramiento y gestión de proyectos, tanto en su
+                                infraestructura como en su mantenimiento.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -189,14 +280,14 @@
                     <div class="col-md-4">
                         <div class="service-item image-zoom">
                             <div class="image-zoom-wrapper">
-                                <img src="img/servicios/4.jpg">
+                                <img src="img/servicios/4.jpg" />
                             </div>
                             <a href="img/servicios/4.jpg" data-fancybox="gallery" class="icon-box"><i
                                     class="bi bi-search"></i></a>
                         </div>
                         <div class="service-item image-zoom mt-4">
                             <div class="image-zoom-wrapper">
-                                <img src="img/servicios/1.jpg">
+                                <img src="img/servicios/1.jpg" />
                             </div>
                             <a href="img/servicios/1.jpg" data-fancybox="gallery" class="icon-box"><i
                                     class="bi bi-search"></i></a>
@@ -205,14 +296,14 @@
                     <div class="col-md-4">
                         <div class="service-item image-zoom">
                             <div class="image-zoom-wrapper">
-                                <img src="img/servicios/2.jpg">
+                                <img src="img/servicios/2.jpg" />
                             </div>
                             <a href="img/servicios/2.jpg" data-fancybox="gallery" class="icon-box"><i
                                     class="bi bi-search"></i></a>
                         </div>
                         <div class="service-item image-zoom mt-4">
                             <div class="image-zoom-wrapper">
-                                <img src="img/servicios/5.jpg">
+                                <img src="img/servicios/5.jpg" />
                             </div>
                             <a href="img/servicios/5.jpg" data-fancybox="gallery" class="icon-box"><i
                                     class="bi bi-search"></i></a>
@@ -221,14 +312,14 @@
                     <div class="col-md-4">
                         <div class="service-item image-zoom">
                             <div class="image-zoom-wrapper">
-                                <img src="img/servicios/6.jpg">
+                                <img src="img/servicios/6.jpg" />
                             </div>
                             <a href="img/servicios/6.jpg" data-fancybox="gallery" class="icon-box"><i
                                     class="bi bi-search"></i></a>
                         </div>
                         <div class="service-item image-zoom mt-4">
                             <div class="image-zoom-wrapper">
-                                <img src="img/servicios/3.jpg">
+                                <img src="img/servicios/3.jpg" />
                             </div>
                             <a href="img/servicios/3.jpg" data-fancybox="gallery" class="icon-box"><i
                                     class="bi bi-search"></i></a>
@@ -253,21 +344,22 @@
                 <div class="row justify-content-center form-contact">
                     <div class="col-8">
                         <form action="#" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
-                            <div class="form-group input-box input-span col-lg-6  d-flex align-items-center">
+                            <div class="form-group input-box input-span col-lg-6 d-flex align-items-center">
                                 <span class="bi bi-person"></span>
-                                <input type="text" class="form-control" placeholder="Nombre" required>
+                                <input type="text" class="form-control" placeholder="Nombre" required />
                             </div>
                             <div class="form-group input-box input-span col-lg-6 d-flex align-items-center">
                                 <span class="bi bi-person"></span>
-                                <input type="text" class="form-control align-items-end" placeholder="Apellido" required>
+                                <input type="text" class="form-control align-items-end" placeholder="Apellido"
+                                    required />
                             </div>
                             <div class="form-group input-box input-span col-lg-6 d-flex align-items-center">
                                 <span class="bi bi-envelope"></span>
-                                <input type="email" class="form-control" placeholder="Email" required>
+                                <input type="email" class="form-control" placeholder="Email" required />
                             </div>
                             <div class="form-group input-box input-span col-lg-6 d-flex align-items-center">
                                 <span class="bi bi-telephone"></span>
-                                <input type="number" class="form-control" placeholder="Teléfono" required>
+                                <input type="number" class="form-control" placeholder="Teléfono" required />
                             </div>
                             <div class="form-group input-box input-textarea col-lg-12 d-flex">
                                 <span class="bi bi-chat mt-1"></span>
@@ -284,23 +376,25 @@
             </div>
         </section>
         <!--Fin Sección Contacto-->
-
     </main>
 
     <!--Footer-->
     <footer>
         <div class="footer-top">
             <div class="container">
-                <div class="row ">
+                <div class="row">
                     <div class="col-12 text-center text-white">
-                        <h4 class="text-white ">Tech.Net</h4>
+                        <h4 class="text-white">Tech.Net</h4>
                         <div class="line mx-auto"></div>
-                        <p>Av. Las Heras 123<br>
-                            3452- 12345689<br>
+                        <p>
+                            Av. Las Heras 123<br />
+                            3452- 12345689<br />
                             Todos los derechos reservados &copy;
-                            <script> document.write(new Date().getFullYear());</script>
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script>
                         </p>
-                        <div class="footer-icon  col-12 text-center d-flex justify-content-center gap-5">
+                        <div class="footer-icon col-12 text-center d-flex justify-content-center gap-5">
                             <span class="bi bi-whatsapp text-white"></span>
                             <span class="bi bi-envelope text-white"></span>
                             <span class="bi bi-messenger text-white"></span>
@@ -313,7 +407,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <p>Developed by <i class="bi bi-code-slash text-danger fw-bold"></i> Patricia
+                        <p>
+                            Developed by
+                            <i class="bi bi-code-slash text-danger fw-bold"></i> Patricia
                             Atanasoff
                         </p>
                     </div>
@@ -330,6 +426,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    <!--Dark Mode -->
+    <script src="js/darkModeBootstrap.js"></script>
     <!--Fancybox-->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <!--Inicializar Fancybox-->
